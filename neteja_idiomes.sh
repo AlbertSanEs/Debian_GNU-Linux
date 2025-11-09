@@ -29,7 +29,8 @@ ipolish iportuguese irussian iswiss
 sudo apt purge -y \
 myspell-et myspell-fa myspell-ga myspell-he myspell-nb myspell-nn \
 myspell-sk myspell-sq myspell-uk \
-wamerican wbulgarian wfrench witalian wpolish wswedish wngerman wnorwegian wportuguese
+wamerican wbulgarian wfrench witalian wpolish wswedish wngerman wnorwegian wportuguese \
+wbrazilian wdanish wdutch
 
 # Eliminar metapaquets task-* excepte català i castellà
 task_keep="task-catalan-desktop|task-spanish-desktop"
