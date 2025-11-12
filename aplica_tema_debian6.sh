@@ -38,14 +38,10 @@ echo "✅ Línia background actualitzada amb la imatge SVG."
 
 
 
-# Per a revisar si funciona correctament.# Comprova que s'ha indicat la ruta de la imatge
-if [ -z "$1" ]; then
-  echo "❌ Has d'indicar la ruta de la imatge com a primer argument."
-  echo "Ús: $0 /usr/share/desktop-base/spacefun-theme/wallpaper/contents/images/3840x2160.svg"
-  exit 1
-fi
+# Per a revisar si funciona correctament.#!/bin/bash
 
-IMATGEBLOQ="$1"
+# Ruta fixa de la imatge de bloqueig
+IMATGEBLOQ="/home/usuari/Imatges/fons_bloqueig.jpg"
 
 # Comprova si la imatge existeix
 if [ ! -f "$IMATGEBLOQ" ]; then
