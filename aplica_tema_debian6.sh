@@ -4,6 +4,7 @@ gsettings set org.mate.interface gtk-theme 'TraditionalOk'
 gsettings set org.mate.Marco.general theme 'TraditionalOk'
 gsettings set org.mate.interface icon-theme 'gnome'
 gsettings set org.mate.background picture-filename /usr/share/desktop-base/spacefun-theme/wallpaper/contents/images/3840x2160.svg
+gsettings set org.mate.screensaver picture-filename /usr/share/desktop-base/spacefun-theme/wallpaper/contents/images/3840x2160.svg
 
 # Ruta de la imatge SVG
 IMATGE="/usr/share/desktop-base/spacefun-theme/login/background.svg"
@@ -34,25 +35,3 @@ sudo sed -i '/^#\?background=/d' "$CONFIG"
 echo "background=$IMATGE" | sudo tee -a "$CONFIG" > /dev/null
 
 echo "✅ Línia background actualitzada amb la imatge SVG."
-
-
-
-
-# Per a revisar si funciona correctament.#!/bin/bash
-
-# Ruta fixa de la imatge de bloqueig
-IMATGEBLOQ="/home/usuari/Imatges/fons_bloqueig.jpg"
-
-# Comprova si la imatge existeix
-if [ ! -f "$IMATGEBLOQ" ]; then
-  echo "⚠️ La imatge no existeix: $IMATGEBLOQ"
-  exit 1
-fi
-
-# Estableix la imatge com a fons d'escriptori
-gsettings set org.mate.background picture-filename "$IMATGEBLOQ"
-
-# Assegura que MATE Screensaver utilitza el fons d'escriptori
-gsettings set org.mate.screensaver use-theme-background true
-
-echo "✅ Imatge de bloqueig configurada amb: $IMATGEBLOQ"
