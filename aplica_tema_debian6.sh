@@ -34,3 +34,29 @@ sudo sed -i '/^#\?background=/d' "$CONFIG"
 echo "background=$IMATGE" | sudo tee -a "$CONFIG" > /dev/null
 
 echo "✅ Línia background actualitzada amb la imatge SVG."
+
+
+
+
+# Per a revisar si funciona correctament.
+
+# Ruta de la imatge (canvia-ho pel teu camí)
+IMATGE="$1"
+
+# Comprova si la imatge existeix
+if [ ! -f "$IMATGE" ]; then
+  echo "⚠️ La imatge no existeix: $IMATGE"
+  exit 1
+fi
+
+# Estableix la imatge com a fons d'escriptori (que MATE Screensaver utilitza)
+gsettings set org.mate.background picture-filename "$IMATGE"
+
+# Opcional: assegura que MATE Screensaver utilitza el fons d'escriptori
+gsettings set org.mate.screensaver use-theme-background true
+
+echo "✅ Imatge de bloqueig configurada amb: $IMATGE"
+
+
+
+
