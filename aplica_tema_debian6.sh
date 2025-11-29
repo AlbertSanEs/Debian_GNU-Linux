@@ -95,6 +95,12 @@ gsettings set org.mate.interface icon-theme 'gnome'
 sleep 1
 echo "[OK] Icones Debian aplicades"
 sleep 1
+
+echo "Establint tema del cursor"
+gsettings set org.mate.peripherals-mouse cursor-theme 'mate-black'
+sleep 1
+echo "[OK] 'mate-black' establer com a tema pel cursor"
+sleep 1
 echo "Establint fons de pantalla i imatge de bloqueig de pantalla..."
 gsettings set org.mate.background picture-filename /usr/share/desktop-base/spacefun-theme/wallpaper/contents/images/3840x2160.svg
 gsettings set org.mate.screensaver picture-filename /usr/share/desktop-base/spacefun-theme/wallpaper/contents/images/3840x2160.svg
